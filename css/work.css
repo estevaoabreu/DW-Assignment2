@@ -80,13 +80,6 @@ article h1:hover {
     text-decoration: underline;
 }
 
-article p {
-    font-size: 0.9em;
-    font-weight: 400;
-    line-height: 150%;
-    padding-bottom: 25px;
-}
-
 article.hover {
     cursor: pointer;
     padding: 0px;
