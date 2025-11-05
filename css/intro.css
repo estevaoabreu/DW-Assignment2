@@ -1,0 +1,105 @@
+body,
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--black);
+}
+
+main {
+    background-color: var(--white);
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+}
+
+.intro {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hello {
+    font-family: Frames;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 3.5em;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.estevao {
+    margin: 0;
+    font-family: Frames;
+    font-weight: 700;
+    margin-top: -40px;
+    color: var(--white);
+    font-size: 15em;
+}
+
+.about {
+    text-align: left;
+    color: var(--white);
+    width: 25vw;
+    font-weight: 300;
+    align-self: flex-end;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 1280px) {
+    .hello {
+        font-size: 2.5em;
+    }
+
+    .estevao {
+        font-size: 9.8em;
+        margin-top: 5px;
+    }
+
+    .about {
+        width: 40vw;
+        font-size: 0.8em;
+    }
+
+    .works {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .hello {
+        font-size: 1.3em;
+        align-self: flex-start;
+    }
+
+    .estevao {
+        font-size: 5em;
+        margin-top: 0;
+    }
+
+    .about {
+        width: 70vw;
+        font-size: 0.65em;
+        align-self: flex-start;
+    }
+
+    .works {
+        height: 60vh;
+    }
+}
