@@ -19,7 +19,6 @@ section {
     flex-wrap: nowrap;
     column-gap: 25px;
     padding-bottom: 25px;
-    max-height: 90vh;
     transition: height 1s;
 }
 
@@ -41,7 +40,6 @@ article {
     background-color: var(--black);
     flex-shrink: 0;
     width: 25vw;
-    height: 75vh;
     overflow: hidden;
     padding: 25px;
     transition: all 0.8s ease-in-out;
@@ -84,7 +82,6 @@ article.hover {
     cursor: pointer;
     padding: 0px;
     width: calc(30vw + 50px);
-    height: calc(75vh + 50px);
     transition: all 0.8s ease-in-out;
 }
 
@@ -100,17 +97,11 @@ section a:last-child {
 @media screen and (max-width: 1280px) {
     article {
         width: 40vw;
-        height: 70vh;
     }
 
     article.hover {
         width: calc(45vw + 50px);
-        height: calc(70vh + 50px);
         padding: 0;
-    }
-
-    .imgcard {
-        height: 75%;
     }
 
     article h1 {
@@ -121,17 +112,11 @@ section a:last-child {
 @media screen and (max-width:720px) {
     article {
         width: 70vw;
-        height: 50vh;
     }
 
     article.hover {
         width: calc(75vw + 50px);
-        height: calc(50vh + 50px);
         padding: 0;
-    }
-
-    .imgcard {
-        height: 60%;
     }
 
     section p {
