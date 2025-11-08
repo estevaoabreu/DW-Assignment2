@@ -34,4 +34,20 @@ function setupSectionInteractions() {
     })
 }
 
-document.addEventListener("DOMContentLoaded",setupSectionInteractions)
+function scrollToMain() {
+    const scrollButton = document.querySelector('.scroll-to-main')
+    const mainContent = document.querySelector('main')
+
+    if (scrollButton && mainContent) {
+        scrollButton.addEventListener('click', () => {
+            mainContent.scrollIntoView({ 
+                behavior: 'smooth' 
+            })
+        })
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupSectionInteractions()
+    scrollToMain()
+})

@@ -74,12 +74,7 @@ article h1 {
     margin-bottom: 15px;
 }
 
-article h1:hover {
-    text-decoration: underline;
-}
-
 article.hover {
-    cursor: pointer;
     padding: 0px;
     width: calc(30vw + 50px);
     transition: all 0.8s ease-in-out;
