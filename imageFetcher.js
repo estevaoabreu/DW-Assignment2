@@ -7,9 +7,13 @@ function randomSeed(length) {
 }
 
 async function fetchData() {
-    const apiURL = `https://picsum.photos/seed/${randomSeed(6)}/600/600`
+    const seed = randomSeed(6)
+    const apiURL = `https://picsum.photos/seed/${seed}/600/600`
     const response = await fetch(apiURL)
-    return { url: response.url }
+    return {
+        url: response.url,
+        seed: seed
+    }
 }
 
 function addContent() {
@@ -20,6 +24,11 @@ function addContent() {
 
         const title = article.querySelector('h1')
         title.textContent = `Project ${index + 1}`
+
+        const hrefs = article.querySelectorAll('a')
+        hrefs.forEach(href => {
+            href.href = `project.html?seed=${data.seed}`
+        })
     })
 }
 

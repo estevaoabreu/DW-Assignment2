@@ -9,6 +9,13 @@
 </head>
 
 <body>
-
+    <img id="project-image" src="" alt="Project Image">
 </body>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const seed = urlParams.get('seed');
+    const projectImage = document.getElementById('project-image');
+    projectImage.src = `https://picsum.photos/seed/${seed}/1200/800`;
+</script>
 </html>
