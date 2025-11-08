@@ -5,17 +5,40 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/project.css">
     <title>Estêvão Abreu - Design Portfolio</title>
 </head>
 
 <body>
-    <img id="project-image" src="" alt="Project Image">
+    <main>
+        <a href="index.html">← Go back</a>
+        <div>
+            <h1 class="title"></h1>
+            <p class="description"></p>
+        </div>
+        <img id="project-image" src="" alt="Project Image">
+    </main>
 </body>
 
 <script>
     const urlParams = new URLSearchParams(window.location.search);
+
     const seed = urlParams.get('seed');
     const projectImage = document.getElementById('project-image');
     projectImage.src = `https://picsum.photos/seed/${seed}/1200/800`;
+
+    const titleElement = document.querySelector('.title');
+    const index = urlParams.get('index');
+    titleElement.textContent = `Project ${index}`;
+
+    const descriptionElement = document.querySelector('.description');
+
+    fetch('https://random-word-api.vercel.app/api?words=30')
+        .then(res => res.json())
+        .then(words => {
+            descriptionElement.textContent = words.join(' ')
+        })
 </script>
+
 </html>

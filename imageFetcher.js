@@ -27,7 +27,7 @@ function addContent() {
 
         const hrefs = article.querySelectorAll('a')
         hrefs.forEach(href => {
-            href.href = `project.html?seed=${data.seed}`
+            href.href = `project.html?seed=${data.seed}&index=${index + 1}`
         })
     })
 }
