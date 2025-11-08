@@ -1,11 +1,11 @@
 function setupSectionInteractions() {
 
-    const imgcards = document.querySelectorAll(".imgcard")
-    imgcards.forEach(imgcard => {
-        const parentArticle = imgcard.closest("article")
+    const imgCards = document.querySelectorAll(".imgcard")
+    imgCards.forEach(imgCard => {
+        const parentArticle = imgCard.closest("article")
         if (parentArticle) {
-            imgcard.addEventListener("mouseover", () => parentArticle.classList.add("hover"))
-            imgcard.addEventListener("mouseleave", () => parentArticle.classList.remove("hover"))
+            imgCard.addEventListener("mouseover", () => parentArticle.classList.add("hover"))
+            imgCard.addEventListener("mouseleave", () => parentArticle.classList.remove("hover"))
         }
     })
 
@@ -34,6 +34,4 @@ function setupSectionInteractions() {
     })
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    setupSectionInteractions()
-})
+document.addEventListener("DOMContentLoaded",setupSectionInteractions)
